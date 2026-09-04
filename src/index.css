@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Rajdhani';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: local('Rajdhani'), local('Rajdhani-Bold'), local('Rajdhani-SemiBold'), local('Chakra Petch'), local('Orbitron'), local('Trebuchet MS'), local('sans-serif');
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: local('Plus Jakarta Sans'), local('PlusJakartaSans-Regular'), local('PlusJakartaSans-Bold'), local('system-ui'), local('-apple-system'), local('Segoe UI'), local('sans-serif');
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #f8fafc;
+    background-color: #0f172a;
+    min-height: 100vh;
+  }
+}
+
+/* Frosted Glass background */
+.frosted-glass-bg {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(244, 63, 94, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(56, 189, 248, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 55%),
+    radial-gradient(circle at 0% 0%, #1e1b4b 0%, #1e1e38 25%, #2a275c 50%, #1c1a3e 75%, #0f1123 100%);
+  color: white;
+  min-height: 100vh;
+  position: relative;
+}
+
+.frosted-glass-ambient {
+  background: 
+    radial-gradient(circle at 85% 15%, rgba(244, 63, 94, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 85%, rgba(56, 189, 248, 0.15) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 55%);
+}
+
+/* Frosted Glass panel classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.20);
+}
+
+.glass-panel-subtle {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Custom sleek scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Aviation HUD overlay animations & styles */
+@keyframes hud-radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-hud-sweep {
+  animation: hud-radar-sweep 20s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes hud-scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+.animate-hud-scanline {
+  animation: hud-scanline 10s ease-in-out infinite;
+}
+
+@keyframes hud-pulse-glow {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-hud-pulse {
+  animation: hud-pulse-glow 4s ease-in-out infinite;
+}
+

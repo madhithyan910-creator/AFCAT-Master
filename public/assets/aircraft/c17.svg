@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bg_grad_c17" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#04070d"/>
+    </radialGradient>
+    <linearGradient id="hud_grad_c17" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Combat Canvas Background -->
+  <rect width="640" height="420" fill="url(#bg_grad_c17)"/>
+
+  <!-- Tactical Radar HUD Grid -->
+  <g stroke="#38bdf8" stroke-width="1" opacity="0.2">
+    <line x1="0" y1="70" x2="640" y2="70" stroke-dasharray="4 4"/>
+    <line x1="0" y1="140" x2="640" y2="140" stroke-dasharray="4 4"/>
+    <line x1="0" y1="210" x2="640" y2="210"/>
+    <line x1="0" y1="280" x2="640" y2="280" stroke-dasharray="4 4"/>
+    <line x1="0" y1="350" x2="640" y2="350" stroke-dasharray="4 4"/>
+
+    <line x1="80" y1="0" x2="80" y2="420" stroke-dasharray="4 4"/>
+    <line x1="160" y1="0" x2="160" y2="420" stroke-dasharray="4 4"/>
+    <line x1="240" y1="0" x2="240" y2="420" stroke-dasharray="4 4"/>
+    <line x1="320" y1="0" x2="320" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420" stroke-dasharray="4 4"/>
+    <line x1="480" y1="0" x2="480" y2="420" stroke-dasharray="4 4"/>
+    <line x1="560" y1="0" x2="560" y2="420" stroke-dasharray="4 4"/>
+
+    <!-- Concentric Radar Range Rings -->
+    <circle cx="320" cy="210" r="80" fill="none"/>
+    <circle cx="320" cy="210" r="150" fill="none" stroke-dasharray="6 6"/>
+  </g>
+
+  <!-- IAF Roundel Emblem (Top Right) -->
+  <g transform="translate(570, 48)">
+    <circle cx="0" cy="0" r="26" fill="#f97316"/>
+    <circle cx="0" cy="0" r="18" fill="#ffffff"/>
+    <circle cx="0" cy="0" r="10" fill="#16a34a"/>
+    <circle cx="0" cy="0" r="4" fill="#1e3a8a"/>
+  </g>
+
+  <!-- Technical Telemetry Labels -->
+  <text x="32" y="42" fill="#38bdf8" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1.5">IAF AIR FLEET DOSSIER // RECON ID: C17</text>
+  <text x="32" y="60" fill="#94a3b8" font-family="monospace" font-size="9" letter-spacing="1">SYSTEM STATUS: COMBAT DEPLOYED // OFFLINE CACHED</text>
+
+  <!-- Main Aircraft Silhouette Graphic -->
+  <g transform="translate(-10, -45) scale(0.95)">
+    
+        <!-- C-17 Wide Body & Swept Wings -->
+        <rect x="130" y="265" width="360" height="70" rx="35" fill="#1e293b" stroke="#38bdf8" stroke-width="3"/>
+        <!-- High Mounted Wings -->
+        <path d="M260,300 L200,90 L260,90 L340,300 Z" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+        <path d="M260,300 L200,510 L260,510 L340,300 Z" fill="#334155" stroke="#38bdf8" stroke-width="2"/>
+        <!-- 4 Turbofan Jet Engines -->
+        <rect x="230" y="140" width="40" height="16" rx="4" fill="#64748b"/>
+        <rect x="270" y="190" width="40" height="16" rx="4" fill="#64748b"/>
+        <rect x="230" y="444" width="40" height="16" rx="4" fill="#64748b"/>
+        <rect x="270" y="394" width="40" height="16" rx="4" fill="#64748b"/>
+        <!-- T-Tail -->
+        <path d="M470,250 L530,250 L530,350 L470,350 Z" fill="#475569" stroke="#0284c7" stroke-width="2"/>
+        <line x1="520" y1="200" x2="520" y2="400" stroke="#38bdf8" stroke-width="10" stroke-linecap="round"/>
+        <!-- Cockpit Windows -->
+        <ellipse cx="150" cy="300" rx="16" ry="22" fill="#0284c7" opacity="0.85"/>
+        
+  </g>
+
+  <!-- Target Acquisition Crosshairs -->
+  <g stroke="#38bdf8" stroke-width="1.5" opacity="0.7">
+    <line x1="320" y1="190" x2="320" y2="200"/>
+    <line x1="320" y1="220" x2="320" y2="230"/>
+    <line x1="300" y1="210" x2="310" y2="210"/>
+    <line x1="330" y1="210" x2="340" y2="210"/>
+  </g>
+
+  <!-- Lower Tactical Card Overlay -->
+  <rect x="24" y="330" width="592" height="72" rx="12" fill="#020617" fill-opacity="0.85" stroke="#334155" stroke-width="1.5"/>
+  <text x="42" y="358" fill="#ffffff" font-family="sans-serif" font-weight="800" font-size="16" letter-spacing="1">BOEING C-17 GLOBEMASTER III</text>
+  <text x="42" y="378" fill="#38bdf8" font-family="monospace" font-weight="bold" font-size="11">SKY TITAN • STRATEGIC HEAVY AIRLIFTER</text>
+  <text x="42" y="392" fill="#cbd5e1" font-family="monospace" font-size="10">830 KM/H • 71-TONNE PAYLOAD • T-90 BANK CARRIER TO DBO</text>
+
+  <!-- Corner Brackets for HUD Frame -->
+  <path d="M16,24 L16,16 L24,16" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M624,24 L624,16 L616,16" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M16,396 L16,404 L24,404" fill="none" stroke="#38bdf8" stroke-width="2"/>
+  <path d="M624,396 L624,404 L616,404" fill="none" stroke="#38bdf8" stroke-width="2"/>
+</svg>

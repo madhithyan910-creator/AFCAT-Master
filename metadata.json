@@ -1,0 +1,6 @@
+{
+  "name": "AFCAT Master",
+  "description": "Ultimate offline preparation platform, interactive training simulator, and complete AFCAT exam ecosystem.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
