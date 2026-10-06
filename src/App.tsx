@@ -23,6 +23,7 @@ import { SettingsView } from './components/SettingsView';
 import { SettingsModal } from './components/SettingsModal';
 import { SearchModal } from './components/SearchModal';
 import { AviationHudOverlay } from './components/AviationHudOverlay';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 export default function App() {
   const [state, setState] = useState<UserProgressState>(() => loadState());
@@ -360,6 +361,9 @@ export default function App() {
         onToggleHud={handleToggleHud}
         onSetHudIntensity={handleSetHudIntensity}
       />
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
